@@ -63,7 +63,7 @@ resource "kubernetes_namespace" "flux_system" {
 
 # Cluster
 data "github_repository" "cluster" {
-  name = var.cluster_repo
+  fulle_name = "${var.github_owner}/${var.cluster_repo}"
 }
 
 resource "tls_private_key" "cluster" {
